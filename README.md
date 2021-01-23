@@ -1,12 +1,12 @@
-#Name
+# Name
 - martin
 
-#How to install?
+# How to install?
 chmod +x install.sh
-$ ./install.sh
+	$ ./install.sh
 
-#How to execute?
-$ martin
+# How to execute?
+	$ martin
 
 
 
