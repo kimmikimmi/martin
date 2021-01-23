@@ -2,7 +2,9 @@
 - martin
 
 # How to install?
-chmod +x install.sh
+	chmod +x install.sh
+
+
 	$ ./install.sh
 
 # How to execute?
