@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Input filename
+echo -n "Please enter project name: "
+read projectName
+
+# Validate linux file name
+valid="^[A-Za-z0-9_-]{1,255}$"
+if [[ ! $projectName =~ $valid ]] 
+then
+    echo "Please check your projectname again".
+    exit 0
+fi
+
+echo "Please select language to use (c|java)"
+read lang
+
+mkdir $projectName
+cd $projectName
+
+case "$lang" in
+    c) 
+	# Create std:c file
+        cp $MARTIN/templates/c/std_template.c "./$projectName.c"
+        # Create c build 
+        echo "gcc -o $projectName.out $projectName.c" > ./build
+        echo "./$projectName.out" >> ./build
+        echo "rm -rf *.out" >> ./build
+        chmod +x ./build;;
+    java)
+        # Create java file
+        cp $MARTIN/templates/java/std_template.java "./$projectName.java"
+        # Create java build
+        echo "javac $projectName.java" > ./build
+        echo "java Solution" >> ./build
+        echo "rm -rf ./*.class" >> ./build
+        chmod +x ./build;;
+    *) echo "it is not supported language yet"
+esac    
+
+cd ..
+echo "Done."
+exit 0
+
