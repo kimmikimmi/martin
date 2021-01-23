@@ -9,10 +9,8 @@
 
 # How to install?
 ```console
-
-	$ chmod +x install.sh
-
-	$ ./install.sh
+$ chmod +x install.sh
+$ ./install.sh
 ```
 
 # How to execute?
