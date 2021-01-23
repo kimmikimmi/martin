@@ -8,9 +8,12 @@
 - @jonghagi77
 
 # How to install?
-	chmod +x install.sh
+```console
+
+	$ chmod +x install.sh
 
 	$ ./install.sh
+```
 
 # How to execute?
 	$ martin
